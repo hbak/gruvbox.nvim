@@ -24,7 +24,8 @@ return {
 	-- bright_green = "#5D9119", -- attempt 1:  too forest
 	-- bright_green = "#6F9C61", -- attempt 2: not different enough
 	-- bright_green = "#95A857", -- attempt 3:  somewhat successful, less mustardy more army
-	bright_green = "#8AB257", -- tad bit more limey
+	-- bright_green = "#8AB257", -- tad bit more limey, it's what you settled on before stopping
+	bright_green = "#98BB6C", -- lifted from kanagawa, "springGreen", strings... IT WORKS!   maybe push aqua to be more... aqua?
 
 
   bright_yellow = "#fabd2f",
