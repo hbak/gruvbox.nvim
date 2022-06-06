@@ -171,7 +171,11 @@ local base_group = {
 
   ColorColumn = { bg = color_column },
   Conceal = { fg = blue },
-  Cursor = { gui = styles.inverse },
+
+	-- 2022-06-06 hbchange
+  -- Cursor = { gui = styles.inverse },
+	Cursor = { fg=bg0, bg=fg0 },
+
   lCursor = "Cursor",
   iCursor = "Cursor",
   vCursor = "Cursor",
@@ -204,7 +208,11 @@ local base_group = {
   PmenuThumb = { bg = bg4 },
   Question = "GruvboxOrangeBold",
   QuickFixLine = { bg = bg0, gui = styles.bold },
-  Search = { fg = hls_highlight, bg = bg0, gui = styles.inverse },
+
+	-- 2022-06-06 hbchange
+  -- Search = { fg = hls_highlight, bg = bg0, gui = styles.inverse },
+  Search = { fg = bg0, bg = orange },
+
   SpecialKey = "GruvboxFg4",
   SpellRare = "GruvboxPurpleUnderline",
   SpellBad = "GruvboxRedUnderline",

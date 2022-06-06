@@ -1,65 +1,16 @@
-<div align="center">
-      <h1> <img src="https://i.postimg.cc/WpQzgxVh/plugin-Icon.png" width="80px"><br/>gruvbox.nvim</h1>
-     </div>
-<p align="center"> <a href="https://twitter.com/intent/user?screen_name=ellisonleao" target="_blank"><img alt="Follow me on twitter" src="https://img.shields.io/twitter/follow/ellisonleao?style=flat-square" style="vertical-align:center" /></a> </p>
+# fork of ellisonleao/gruvbox.nvim with my own changes
+don't use this fork, it's terrible and all decisions made out of anger
+changes to be marked in code with comment "hbchange"
 
-A port of [gruvbox community](https://github.com/gruvbox-community/gruvbox) theme to lua with [treesitter](https://github.com/nvim-treesitter/nvim-treesitter) support!
+## 2022-06-06 can't ever tell where the fkn cursor is when searching
+absolutely despise that I can't ever tell where the cursor is when doing hl search
+- changing Cursor gui=reverse makes it so that you can change the cursor bg but you can't change the cursor fg on search results
+### solution
+- don't use gui=reverse for searches.   It's nice but it has strange precedence rules.
+		- doesn't help, cursor highlight STILL fg=inverse-searchhl-bg 
 
-# Prerequisites
 
-Neovim 0.6.0+
-
-# Installing
-
-Using `vim-plug`
-
-```vim
-Plug 'ellisonleao/gruvbox.nvim'
-```
-
-Using `packer`
-
-```lua
-use { "ellisonleao/gruvbox.nvim" }
-```
-
-# Usage
-
-Inside `init.vim`
-
-```vim
-set termguicolors
-set background=dark " or light if you want light mode
-colorscheme gruvbox
-```
-
-Inside `init.lua`
-
-```lua
-vim.opt.termguicolors = true
-vim.o.background = "dark" -- or "light" for light mode
-vim.cmd([[colorscheme gruvbox]])
-```
-
-# Configuration
-
-all `g:gruvbox_` configs are the same [as the original one](https://github.com/morhetz/gruvbox/wiki/Configuration) except for `g:gruvbox_guisp_fallback`
-
-# Additional supported plugins
-
-- [vim-signify](https://github.com/mhinz/vim-signify)
-- [vim-startify](https://github.com/mhinz/vim-startify)
-- [lspsaga.nvim](https://github.com/glepnir/lspsaga.nvim)
-- [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
-
-More to be added..
-
-# Screenshots
-
-## dark mode
-
-![Screenshot-from-2021-02-25-11-41-18.png](https://i.postimg.cc/66fSHrV8/Screenshot-from-2021-02-25-11-41-18.png)
-
-## light mode
-
-![Screenshot-from-2021-02-25-11-41-33.png](https://i.postimg.cc/pXVS3mkq/Screenshot-from-2021-02-25-11-41-33.png)
+## initial changes
+- shift dark[n] colors so that dark0_hard is the baseline, b/c there is a general reliance on each bg[n] to be slightly lighter than the previous.  Overlay screens were way too light.  Pmenu group changed, bg=bg1
+- change bright_green to use springGreen from Kanagawa -- bc hate seeing an entire screen of puke green
+		- TODO don't know if there's any differentiation between bright_green and bright_aqua
