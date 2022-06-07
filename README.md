@@ -6,8 +6,9 @@ changes to be marked in code with comment "hbchange"
 absolutely despise that I can't ever tell where the cursor is when doing hl search
 - changing Cursor gui=reverse makes it so that you can change the cursor bg but you can't change the cursor fg on search results
 ### solution
-- don't use gui=reverse for searches.   It's nice but it has strange precedence rules.
-		- doesn't help, cursor highlight STILL fg=inverse-searchhl-bg 
+- set a static fg and bg for Cursor, don't use reverse/inverse
+- don't use gui=reverse for searches.   It's nice but cursor fg on search results will always be search bg, and that's too light to see against a white cursor
+- use a dark color bg for search results.  Making fg darker helps it stand out more.   I set search bg = colors.faded_purple, fg = fg4
 
 
 ## initial changes

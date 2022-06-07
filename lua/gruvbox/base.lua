@@ -174,7 +174,21 @@ local base_group = {
 
 	-- 2022-06-06 hbchange
   -- Cursor = { gui = styles.inverse },
-	Cursor = { fg=bg0, bg=fg0 },
+	-- Cursor = { fg=bg0, bg=fg0 }, -- your shittty attempt
+	Cursor = { fg='#1F1F28', bg='#DCD7BA' }, -- taken from Kanagawa
+
+
+	-- 2022-06-06 hbchange
+  -- Search = { fg = hls_highlight, bg = bg0, gui = styles.inverse }, -- original
+  -- Search = { fg = bg0, bg = gray },																-- shitty attempt
+	-- Search = { ctermfg=0,ctermbg=11,guifg='#DCD7BA',guibg='#2D4F67' }, -- taken directly from Kanagawa
+	-- Search = { ctermfg=0, ctermbg=11, fg = fg3, bg = "#313566" }, -- shitty adjustment to Kanagawa
+	-- Search = { ctermfg=0, ctermbg=11, fg = fg3, bg = "#802470" }, -- shitty adjustment to Kanagawa
+	Search = { ctermfg=0, ctermbg=11, fg = fg3, bg = colors.faded_purple }, -- shitty adjustment to Kanagawa
+
+
+  -- IncSearch      xxx cterm=reverse guifg=#223249 guibg=#FF9E3B
+  IncSearch = { fg = hls_cursor, bg = bg0, gui = styles.inverse },
 
   lCursor = "Cursor",
   iCursor = "Cursor",
@@ -192,7 +206,6 @@ local base_group = {
   Folded = { fg = gray, bg = bg1, gui = styles.italic },
   FoldColumn = { fg = gray, bg = bg1 },
   SignColumn = { bg = sign_column },
-  IncSearch = { fg = hls_cursor, bg = bg0, gui = styles.inverse },
   LineNr = { fg = bg4, bg = number_column },
   CursorLineNr = { fg = yellow, bg = bg1 },
   MatchParen = { bg = bg3, gui = styles.bold },
@@ -209,9 +222,6 @@ local base_group = {
   Question = "GruvboxOrangeBold",
   QuickFixLine = { bg = bg0, gui = styles.bold },
 
-	-- 2022-06-06 hbchange
-  -- Search = { fg = hls_highlight, bg = bg0, gui = styles.inverse },
-  Search = { fg = bg0, bg = orange },
 
   SpecialKey = "GruvboxFg4",
   SpellRare = "GruvboxPurpleUnderline",
