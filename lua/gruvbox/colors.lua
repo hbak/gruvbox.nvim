@@ -1,23 +1,40 @@
 -- gruvbox palette
 return {
-  dark0_hard = "#1d2021",
-  dark0 = "#282828",
-  dark0_soft = "#32302f",
-  -- dark1 = "#3c3836", -- CHANGE shifted all the darks one up, setting dark0hard as dar0 and dark0[nothard] as dark1, and so on
-  dark1 = "#282828",
+	-- 3. want more definition between dark0_hard and dark1
+	-- going full black?
+     dark0_hard    =   "#1d2021",
+     dark0         =   "#282828",
+     dark0_soft    =   "#32302f",
+     dark1         =   "#282828",
+     dark2         =   "#3c3836",
+     dark3         =   "#504945",
+     dark4         =   "#665c54",
+     light0_hard   =   "#f9f5d7",
+     light0        =   "#fbf1c7",
+     light0_soft   =   "#f2e5bc",
+     light1        =   "#ebdbb2",
+     light2        =   "#d5c4a1",
+     light3        =   "#bdae93",
+     light4        =   "#a89984",
+
+	-- 1. originals darks:
+	-- dark0_hard = "#1d2021",
+  -- dark0 = "#282828",
+  -- dark0_soft = "#32302f",
+  -- dark1 = "#3c3836",
   -- dark2 = "#504945",
-  dark2 = "#3c3836",
   -- dark3 = "#665c54",
-  dark3 = "#504945",
   -- dark4 = "#7c6f64",
-  dark4 = "#665c54",
-  light0_hard = "#f9f5d7",
-  light0 = "#fbf1c7",
-  light0_soft = "#f2e5bc",
-  light1 = "#ebdbb2",
-  light2 = "#d5c4a1",
-  light3 = "#bdae93",
-  light4 = "#a89984",
+
+	-- 2. CHANGE shifted all the darks one up, setting dark0hard as dar0 and dark0[nothard] as dark1, and so on
+  -- dark0_hard = "#1d2021",
+  -- dark0 = "#282828",
+  -- dark0_soft = "#32302f",
+  -- dark1 = "#282828",
+  -- dark2 = "#3c3836",
+  -- dark3 = "#504945",
+  -- dark4 = "#665c54",
+
   bright_red = "#fb4934",
 	bright_green = "#b8bb26", -- original
 	-- bright_green = "#98C379", -- your chosen seafoam replacement
